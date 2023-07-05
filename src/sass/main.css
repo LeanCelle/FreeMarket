@@ -1,0 +1,115 @@
+@charset "UTF-8";
+* {
+  margin: 0px 0px;
+  padding: 0px 0px;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+section.sectionAll {
+  display: flex;
+}
+
+div.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(15, 18, 0);
+  height: 100vh;
+  width: 30%;
+  overflow-y: auto; /* Añade una barra de desplazamiento vertical si es necesario */
+}
+div.navbar img.logo {
+  margin-top: 5rem;
+  width: 10rem;
+}
+div.navbar nav.nav-navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; /* Hace que el <nav> ocupe todo el espacio disponible verticalmente */
+}
+div.navbar nav.nav-navbar ul.navbar {
+  display: flex;
+  align-items: flex-start;
+  gap: 5rem;
+  flex-direction: column;
+  padding: 0px;
+  list-style: none;
+  overflow-y: auto; /* Añade una barra de desplazamiento si los <li> no caben */
+}
+div.navbar nav.nav-navbar ul.navbar li.navbar {
+  color: rgba(255, 255, 255, 0.878);
+  display: flex;
+  font-family: Helvetica;
+  font-size: 2rem;
+}
+div.navbar nav.nav-navbar ul.navbar li.navbar:hover {
+  color: white;
+}
+
+div.body {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+nav.navCarrito div.div-carrito {
+  display: flex;
+  justify-content: flex-end;
+}
+nav.navCarrito div.div-carrito span {
+  font-weight: bold;
+}
+nav.navCarrito div.div-carrito img.carrito {
+  width: 2rem;
+}
+
+.group {
+  display: flex;
+  line-height: 28px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.group .input {
+  width: 100%;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: 0.3s ease;
+}
+.group .input::-moz-placeholder {
+  display: flex;
+  text-align: center;
+  color: #9e9ea7;
+}
+.group .input::placeholder {
+  display: flex;
+  text-align: center;
+  color: #9e9ea7;
+}
+.group .input:focus, .group .input:hover {
+  outline: none;
+  border-color: rgba(201, 201, 201, 0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 2px rgba(105, 105, 105, 0.1);
+}
+.group .icon {
+  position: absolute;
+  left: 1rem;
+  fill: #9e9ea7;
+  width: 1rem;
+  height: 1rem;
+}
+
+div.other {
+  color: white;
+  background-color: rgb(15, 18, 0);
+  width: 30%;
+}/*# sourceMappingURL=main.css.map */
