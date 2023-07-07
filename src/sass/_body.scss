@@ -1,6 +1,13 @@
-div.body {
+div#divbody {
     width: 100%;
     background-color: #ffffff;
+    height: 100vh;
+    overflow-y: scroll; /* Asegura el desplazamiento vertical */
+    scrollbar-width: thin; /* Establece el grosor de la barra lateral */
+    scrollbar-color: transparent transparent;
+    &::-webkit-scrollbar {
+        width: 0; /* Establece el ancho de la barra lateral */
+      }
 }
 
 nav.navCarrito {
@@ -8,6 +15,7 @@ nav.navCarrito {
         display: flex;
         justify-content: flex-end;
         span {
+            padding: 0.2rem;
             font-weight: bold;
         }
         img.carrito {
@@ -36,6 +44,7 @@ nav.navCarrito {
         color: #0d0c22;
         transition: .3s ease;
         &::placeholder {
+            font-size: 1.5rem;
             display: flex;
             text-align: center;
             color: #9e9ea7;

@@ -1,10 +1,13 @@
+
+
 function Carrito () {
+
     return (
         <>
         
         <nav className="navbar bg-body-tertiary navCarrito">
           <div className="container-fluid div-carrito">
-            <button className="navbar-toggler button-carrito" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <button className= "navbar-toggler button-carrito" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
               <img className="carrito" src="./carrito.png" alt="" />
               <span className="contadorCarrito">0</span>
               </button>
@@ -14,7 +17,7 @@ function Carrito () {
               <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body">
-              <p>prueba</p>
+              
             </div>
             </div>
         </div>

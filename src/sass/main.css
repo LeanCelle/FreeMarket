@@ -6,30 +6,34 @@
   font-size: 10px;
 }
 
-section.sectionAll {
+div#layout {
   display: flex;
 }
 
-div.navbar {
+div#divnavbar {
   display: flex;
   flex-direction: column;
-  background-color: rgb(15, 18, 0);
+  background: url(../assets/wave.svg);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
   height: 100vh;
-  width: 30%;
+  width: 24%;
+  padding: 0rem;
   overflow-y: auto; /* Añade una barra de desplazamiento vertical si es necesario */
 }
-div.navbar img.logo {
+div#divnavbar img.logo {
+  margin: auto;
   margin-top: 5rem;
   width: 10rem;
 }
-div.navbar nav.nav-navbar {
+div#divnavbar nav.nav-navbar {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1; /* Hace que el <nav> ocupe todo el espacio disponible verticalmente */
 }
-div.navbar nav.nav-navbar ul.navbar {
+div#divnavbar nav.nav-navbar ul.navbar {
   display: flex;
   align-items: flex-start;
   gap: 5rem;
@@ -38,19 +42,28 @@ div.navbar nav.nav-navbar ul.navbar {
   list-style: none;
   overflow-y: auto; /* Añade una barra de desplazamiento si los <li> no caben */
 }
-div.navbar nav.nav-navbar ul.navbar li.navbar {
-  color: rgba(255, 255, 255, 0.878);
+div#divnavbar nav.nav-navbar ul.navbar li.navbar {
+  color: white;
   display: flex;
   font-family: Helvetica;
   font-size: 2rem;
 }
-div.navbar nav.nav-navbar ul.navbar li.navbar:hover {
-  color: white;
+div#divnavbar nav.nav-navbar ul.navbar li.navbar:hover {
+  color: rgba(255, 255, 255, 0.793);
+  border-bottom: solid 0.1rem rgb(255, 255, 255);
+  width: 100%;
 }
 
-div.body {
+div#divbody {
   width: 100%;
   background-color: #ffffff;
+  height: 100vh;
+  overflow-y: scroll; /* Asegura el desplazamiento vertical */
+  scrollbar-width: thin; /* Establece el grosor de la barra lateral */
+  scrollbar-color: transparent transparent;
+}
+div#divbody::-webkit-scrollbar {
+  width: 0; /* Establece el ancho de la barra lateral */
 }
 
 nav.navCarrito div.div-carrito {
@@ -58,6 +71,7 @@ nav.navCarrito div.div-carrito {
   justify-content: flex-end;
 }
 nav.navCarrito div.div-carrito span {
+  padding: 0.2rem;
   font-weight: bold;
 }
 nav.navCarrito div.div-carrito img.carrito {
@@ -85,11 +99,13 @@ nav.navCarrito div.div-carrito img.carrito {
   transition: 0.3s ease;
 }
 .group .input::-moz-placeholder {
+  font-size: 1.5rem;
   display: flex;
   text-align: center;
   color: #9e9ea7;
 }
 .group .input::placeholder {
+  font-size: 1.5rem;
   display: flex;
   text-align: center;
   color: #9e9ea7;
@@ -106,10 +122,4 @@ nav.navCarrito div.div-carrito img.carrito {
   fill: #9e9ea7;
   width: 1rem;
   height: 1rem;
-}
-
-div.other {
-  color: white;
-  background-color: rgb(15, 18, 0);
-  width: 30%;
 }/*# sourceMappingURL=main.css.map */
