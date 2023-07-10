@@ -1,7 +1,9 @@
 function Button (props) {
+
     return (
         <>
         <button
+        onClick={props.onClick}
         className="button"
         style={{background: props.bgcolor, color: props.color, width: props.width, padding: props.padding, margin: props.margin, fontSize: props.fontSize, fontFamily: props.fontFamily, border: props.border}}
         >

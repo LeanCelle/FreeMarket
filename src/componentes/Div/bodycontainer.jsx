@@ -3,16 +3,22 @@ import Carrito from '../Carrito/carrito';
 import Productos from '../ItemListContainer/listcontainer';
 
 
-function DivBody () {
+function BodyContainer() {
     return (
         <>
         <div id="divbody">
         <Carrito/>
         <Search/>
-        <Productos/>
+        <Productos
+        text="Productos"
+        bgColor="grey"
+        color="white"
+        fontSize="2rem"
+        fontFamily="Helvetica"
+        />
         </div>
         </>
     )
 }
 
-export default DivBody
+export default BodyContainer;

@@ -1,12 +1,12 @@
-import DivNavbar from "../Div/divnavbar"
-import DivBody from "../Div/divbody"
+import NavbarContainer from "../Div/navbarcontainer"
+import BodyContainer from "../Div/bodycontainer"
 
 function Layout () {
     return (
         <>
         <div id="layout">
-            <DivNavbar></DivNavbar>
-            <DivBody></DivBody>
+            <NavbarContainer></NavbarContainer>
+            <BodyContainer></BodyContainer>
         </div>
         </>
     )
