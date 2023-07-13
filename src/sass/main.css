@@ -13,18 +13,16 @@ div#layout {
 div#divnavbar {
   display: flex;
   flex-direction: column;
-  background: url(../assets/wave.svg);
-  background-size: auto 100%;
-  background-repeat: no-repeat;
+  background-color: #f1f1f1;
   height: 100vh;
-  width: 24%;
+  width: 22%;
   padding: 0rem;
   overflow-y: auto; /* Añade una barra de desplazamiento vertical si es necesario */
 }
 div#divnavbar img.logo {
   margin: auto;
   margin-top: 5rem;
-  width: 10rem;
+  width: 12rem;
 }
 div#divnavbar nav.nav-navbar {
   width: 100%;
@@ -43,18 +41,18 @@ div#divnavbar nav.nav-navbar ul.navbar {
   overflow-y: auto; /* Añade una barra de desplazamiento si los <li> no caben */
 }
 div#divnavbar nav.nav-navbar ul.navbar li.navbar {
-  color: white;
+  color: black;
   display: flex;
   font-family: Helvetica;
-  font-size: 2rem;
-}
-div#divnavbar nav.nav-navbar ul.navbar li.navbar:hover {
-  color: rgba(255, 255, 255, 0.793);
-  border-bottom: solid 0.1rem rgb(255, 255, 255);
+  font-size: 1.5rem;
   width: 100%;
 }
+div#divnavbar nav.nav-navbar ul.navbar li.navbar:hover {
+  color: rgba(99, 96, 255, 0.793);
+  border-bottom: solid 0.1rem rgba(99, 96, 255, 0.793);
+}
 
-div#divbody {
+div.bodyContainer {
   width: 100%;
   background-color: #ffffff;
   height: 100vh;
@@ -62,20 +60,23 @@ div#divbody {
   scrollbar-width: thin; /* Establece el grosor de la barra lateral */
   scrollbar-color: transparent transparent;
 }
-div#divbody::-webkit-scrollbar {
+div.bodyContainer::-webkit-scrollbar {
   width: 0; /* Establece el ancho de la barra lateral */
 }
 
+nav.navCarrito {
+  display: flex;
+}
 nav.navCarrito div.div-carrito {
   display: flex;
   justify-content: flex-end;
 }
-nav.navCarrito div.div-carrito span {
+nav.navCarrito div.div-carrito span.contadorCarrito {
   padding: 0.2rem;
   font-weight: bold;
 }
-nav.navCarrito div.div-carrito img.carrito {
-  width: 2rem;
+nav.navCarrito div.div-carrito .carrito {
+  font-size: 2rem;
 }
 
 .group {

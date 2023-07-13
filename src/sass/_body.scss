@@ -1,4 +1,4 @@
-div#divbody {
+div.bodyContainer {
     width: 100%;
     background-color: #ffffff;
     height: 100vh;
@@ -11,15 +11,16 @@ div#divbody {
 }
 
 nav.navCarrito {
+    display: flex;
     div.div-carrito {
         display: flex;
         justify-content: flex-end;
-        span {
+        span.contadorCarrito {
             padding: 0.2rem;
             font-weight: bold;
         }
-        img.carrito {
-            width: 2rem;
+        .carrito {
+            font-size: 2rem;
         }
     }
 }

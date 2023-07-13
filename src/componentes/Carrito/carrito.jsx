@@ -1,4 +1,4 @@
-
+import {LiaShoppingCartSolid} from 'react-icons/lia'
 
 function Carrito () {
 
@@ -8,7 +8,7 @@ function Carrito () {
         <nav className="navbar bg-body-tertiary navCarrito">
           <div className="container-fluid div-carrito">
           <button className= "navbar-toggler button-carrito" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-              <img className="carrito" src="./carrito.png" alt="" />
+              <LiaShoppingCartSolid className='carrito'/>
               <span className="contadorCarrito">0</span>
               </button>
               <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
