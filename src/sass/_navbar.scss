@@ -12,9 +12,11 @@ div#divnavbar {
     padding: 0rem;
     overflow-y: auto; /* Añade una barra de desplazamiento vertical si es necesario */
     img.logo {
+        display: flex;
         margin: auto;
-        margin-top: 5rem;
-        width: 12rem;
+        margin-top: 4rem;
+        justify-content: center;
+        width: 15rem;
     }
     nav.nav-navbar {
         width: 100%;
@@ -30,18 +32,21 @@ div#divnavbar {
             padding: 0px;
             list-style: none;
             overflow-y: auto; /* Añade una barra de desplazamiento si los <li> no caben */
-            li.navbar {
-                color: black;
-                display: flex;
-                font-family: Helvetica;
-                font-size: 1.5rem;
-                width: 100%;
-                &:hover {
-                    color: rgba(99, 96, 255, 0.793);
-                    border-bottom: solid 0.1rem rgba(99, 96, 255, 0.793);
-                }
+            a {
+                text-decoration: none;
+                li.navbar {
+                    color: black;
+                    display: flex;
+                    font-family: Helvetica;
+                    font-size: 1.5rem;
+                    width: 100%;
+                    text-decoration: none;
+                    &:hover {
+                        color: rgba(99, 96, 255, 0.793);
+                        border-bottom: solid 0.1rem rgba(99, 96, 255, 0.793);
+                    }
+            }
             }
         }
     }
 }
-   

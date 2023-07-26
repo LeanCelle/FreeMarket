@@ -5,6 +5,35 @@
     font-size: 10px;
 }
 
+// Keyframes
+
+@keyframes bounce1 {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+}
+  
+@keyframes bounce2 {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+}
+  
+@keyframes bounce3 {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-40px);
+    }
+}
+
 
 @import "navbar";
 @import "body";
