@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { useState, useEffect } from 'react';
-import { getProducts } from '../../mock/data';
+import { getProducts } from '../mock/data';
 import { Link } from 'react-router-dom';
 
 function Inicio() {

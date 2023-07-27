@@ -2,14 +2,14 @@ import { Link } from "react-router-dom"
 function Navbar () {
     return (
         <>
-        <Link to='/'><img className="logo" src="https://i.postimg.cc/SKGW8SyV/freemarket-logo.png" alt="" /></Link>
+        <Link to='/'><img className="logo" src="https://i.postimg.cc/PrLQ4GP3/Captura-de-pantalla-2023-07-27-011146-removebg-preview.png" alt="Logo" /></Link>
         <nav className="nav-navbar">
             <ul className="navbar">
-                <Link to='/vehiculos'><li className="navbar">Vehículos</li></Link>
-                <Link to='/inmuebles'><li className="navbar">Inmuebles</li></Link>
-                <Link to='/supermercado'><li className="navbar">Supermercado</li></Link>
-                <Link to='/tecnologia'><li className="navbar">Tecnología</li></Link>
-                <Link to= '/deportesyfitness'><li className="navbar">Deportes y Fitness</li></Link>
+                <Link to='/category/Vehiculos'><li className="navbar">Vehículos</li></Link>
+                <Link to='/category/Inmuebles'><li className="navbar">Inmuebles</li></Link>
+                <Link to='/category/Supermercado'><li className="navbar">Supermercado</li></Link>
+                <Link to='/category/Tecnologia'><li className="navbar">Tecnología</li></Link>
+                <Link to='/category/Deportes y Fitness'><li className="navbar">Deportes y Fitness</li></Link>
             </ul>
         </nav>
         </>
@@ -17,3 +17,7 @@ function Navbar () {
 }
 
 export default Navbar
+
+
+
+// https://i.postimg.cc/SKGW8SyV/freemarket-logo.png

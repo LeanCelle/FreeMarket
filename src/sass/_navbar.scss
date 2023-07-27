@@ -6,7 +6,7 @@ div#layout {
 div#divnavbar {
     display: flex;
     flex-direction: column;
-    background-color: #f1f1f1;
+    background-color: #000000;
     height: 100vh;
     width: 22%;
     padding: 0rem;
@@ -16,7 +16,7 @@ div#divnavbar {
         margin: auto;
         margin-top: 4rem;
         justify-content: center;
-        width: 15rem;
+        width: 18rem;
     }
     nav.nav-navbar {
         width: 100%;
@@ -35,15 +35,15 @@ div#divnavbar {
             a {
                 text-decoration: none;
                 li.navbar {
-                    color: black;
+                    color: white;
                     display: flex;
                     font-family: Helvetica;
                     font-size: 1.5rem;
                     width: 100%;
                     text-decoration: none;
                     &:hover {
-                        color: rgba(99, 96, 255, 0.793);
-                        border-bottom: solid 0.1rem rgba(99, 96, 255, 0.793);
+                        color: rgb(187, 186, 255);
+                        //border-bottom: solid 0.1rem rgba(99, 96, 255, 0.793);
                     }
             }
             }

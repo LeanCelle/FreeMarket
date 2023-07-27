@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
-import { carrito } from "../../../mock/data";
+import { CartContext } from "../../cartcontext/Provider";
 
 const ItemDetail = ({ product }) => {
   const { id } = useParams();
   const [selectedProduct, setSelectedProduct] = useState();
+  const { addItemToCart } = useContext(CartContext);
+  
 
   useEffect(() => {
     // Busco el producto que coincida con el ID en product
@@ -18,20 +20,6 @@ const ItemDetail = ({ product }) => {
 
   if (!selectedProduct) {
     return null;
-  }
-
-  // Agrego producto al carrito
-  function agregarAlCarrito() {
-    const productoExistente = carrito.find((item) => item.id === selectedProduct.id);
-
-    if (productoExistente) {
-
-      productoExistente.cantidad++;
-    } else {
-
-      const producto = { ...selectedProduct, cantidad: 1 };
-      carrito.push(producto);
-    }
   }
 
   const { img, name, description, price, stock } = selectedProduct;
@@ -48,7 +36,7 @@ const ItemDetail = ({ product }) => {
           <p className="detailStock">
             <em>Stock: {stock}</em>
           </p>
-          <ItemCount initial={1} stock={stock} agregarAlCarrito={agregarAlCarrito} />
+          <ItemCount initial={1} stock={stock} onClick={() => addItemToCart(product)} />
         </div>
       </div>
       <h4 className="titleDescription">Descripción</h4>

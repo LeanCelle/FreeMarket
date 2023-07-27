@@ -3,12 +3,12 @@ import React from "react";
 import Item from "../Item/item";
 import Loading from "../Loading/loading";
 
-function ItemList({ products }) {
+function ItemList({ products, loading }) {
 
   return (
     <>
     <div>
-      {products.length === 0 ? (
+      {loading ? (
         <Loading/>
       ) : (
         products.map((product) => <Item key={product.id} product={product} />)

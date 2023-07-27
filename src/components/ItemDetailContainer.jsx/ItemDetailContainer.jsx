@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getProducts } from "../../../mock/data";
+import { getProducts } from "../../mock/data";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Loading from "../Loading/loading";
 
