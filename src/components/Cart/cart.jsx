@@ -19,12 +19,17 @@ const Carrito = () => {
           </div>
           <div className="offcanvas-body">
             {products.map(({ id, name, price, cantidad, img }) => (
-              <div key={id}>
-                <img src={img} alt={name} />
-                <h3>{name}</h3>
-                <p>Precio: ${price}</p>
-                <p>Cantidad: {cantidad}</p>
+              <div key={id} className='prodCarrito'>
+                <div className="imgCarrito">
+                <img className='imgCarrito' src={img} alt={name} />
+                </div>
+                <div className="namePrice">
+                <h3 className='prodCarrito'>{name} - ${price}</h3>
+                <p className='prodCarrito'>Cantidad: {cantidad}</p>
+                </div>
+                <div className="buttonCarrito">
                 <button className="btn btn-danger" onClick={() => removeFromCart(id)}>Eliminar</button>
+                </div>
               </div>
             ))}
           </div>
