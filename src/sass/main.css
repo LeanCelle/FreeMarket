@@ -75,6 +75,9 @@ div.bodyContainer {
 
 nav.navCarrito {
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 nav.navCarrito div.div-carrito {
   display: flex;
@@ -87,7 +90,111 @@ nav.navCarrito div.div-carrito span.contadorCarrito {
 nav.navCarrito div.div-carrito .carrito {
   font-size: 2rem;
 }
+nav.navCarrito div.div-carrito button.button-carrito:active {
+  box-shadow: none;
+}
+nav.navCarrito div.div-carrito button.button-carrito:focus {
+  box-shadow: none;
+}
 
+div.cartTotal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div.cartTotal h4.textTotal {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+div.cartTotal h5.total {
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.cta {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 33px;
+  margin: 4rem auto 4rem auto;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  color: white;
+  background: #787aff;
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+  border: none;
+}
+
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #52fb38;
+}
+
+.cta .second {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover .second {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+.span {
+  transform: skewX(15deg);
+}
+
+.second {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover .three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover .one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover .two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #48fb38;
+  }
+  100% {
+    fill: white;
+  }
+}
 .group {
   display: flex;
   line-height: 28px;
@@ -496,19 +603,49 @@ div.prodCarrito div.imgCarrito img.imgCarrito {
 div.prodCarrito div.namePrice {
   width: 100%;
   display: flex;
+  align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 0rem 2rem;
+  gap: 0.5rem;
 }
 div.prodCarrito div.namePrice h3.prodCarrito {
   font-size: 1rem;
   font-weight: normal;
+  margin: 0;
 }
 div.prodCarrito div.namePrice p.prodCarrito {
   font-size: 1rem;
+  margin: 0;
 }
 div.prodCarrito div.buttonCarrito {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+button.reduce {
+  margin-right: 1rem;
+  background-color: #787aff;
+  border: none;
+}
+button.reduce:hover {
+  background-color: rgba(255, 0, 0, 0.7803921569);
+}
+
+button.add {
+  margin-left: 1rem;
+  background-color: #787aff;
+  border: none;
+}
+button.add:hover {
+  background-color: rgba(72, 251, 56, 0.6862745098);
+}
+
+button.comprar {
+  margin-top: 0.5rem;
+  background-color: #787aff;
+  border: none;
+}
+button.comprar:hover {
+  background-color: rgba(72, 251, 56, 0.6862745098);
 }/*# sourceMappingURL=main.css.map */

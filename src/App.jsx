@@ -7,7 +7,7 @@ import ItemDetailContainer from './components/ItemDetailContainer.jsx/ItemDetail
 import Inicio from './pages/Inicio';
 import Footer from './components/Footer/footer';
 import Categories from './pages/Categories';
-import CartProvider from './cartcontext/Provider';
+import CartProvider from './Context/Provider';
 
 function App() {
 

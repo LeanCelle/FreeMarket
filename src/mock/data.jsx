@@ -307,7 +307,3 @@ export const getProducts = () => {
       }, 2000);
     });
 };
-
-
-
-export const carrito = []

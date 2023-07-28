@@ -1,4 +1,4 @@
-function Button (props) {
+function Button () {
 
     return (
         <>

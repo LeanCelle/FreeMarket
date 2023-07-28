@@ -17,7 +17,3 @@ function Navbar () {
 }
 
 export default Navbar
-
-
-
-// https://i.postimg.cc/SKGW8SyV/freemarket-logo.png
