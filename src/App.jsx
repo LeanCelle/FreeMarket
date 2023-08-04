@@ -8,6 +8,8 @@ import Inicio from './pages/Inicio';
 import Footer from './components/Footer/footer';
 import Categories from './pages/Categories';
 import CartProvider from './Context/Provider';
+import InicioSesion from './pages/InicioSesion';
+import Terms from './pages/Terms';
 
 function App() {
 
@@ -25,6 +27,8 @@ function App() {
         <Route path="/" element={<Inicio/>} />
         <Route path="/category/:id" element={<Categories/>} />
         <Route path="/producto/:id" element={<ItemDetailContainer/>} />
+        <Route path="/iniciosesion" element={<InicioSesion/>} />
+        <Route path="/terminos-y-condiciones" element={<Terms/>} />
         
       </Routes>
       <Footer/>

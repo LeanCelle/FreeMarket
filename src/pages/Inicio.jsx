@@ -21,14 +21,14 @@ function Inicio() {
   return (
     <>
       <Carousel>
-        <Carousel.Item interval={2000}>
-          <img className='banner' src="https://i.postimg.cc/kM8KD9MM/samsung-banner.webp" alt="" />
+        <Carousel.Item interval={4000}>
+          <Link to='/category/Tecnologia'><img className='banner' src="https://i.postimg.cc/4xbgLG89/est-a-un-clic-1.png" alt="" /></Link>
         </Carousel.Item>
-        <Carousel.Item interval={2000}>
-          <img className='banner' src="https://i.postimg.cc/SsZ9bNmk/aumenta-banner.webp" alt="" />
+        <Carousel.Item interval={4000}>
+          <Link to='/category/Deportes y Fitness'><img className='banner' src="https://i.postimg.cc/ydmK5Sys/est-a-un-clic-3.png" alt="" /></Link>
         </Carousel.Item>
-        <Carousel.Item interval={2000}>
-          <img className='banner' src="https://i.postimg.cc/fL6dBWZL/inmuebles-banner.webp" alt="" />
+        <Carousel.Item interval={4000}>
+          <Link to='/category/Inmuebles'><img className='banner' src="https://i.postimg.cc/nLgQ3qSr/est-a-un-clic.png" alt="" /></Link>
         </Carousel.Item>
       </Carousel>
 
@@ -95,3 +95,10 @@ function Inicio() {
 
 export default Inicio;
 
+
+
+// <img className='banner' src="https://i.postimg.cc/kM8KD9MM/samsung-banner.webp" alt="" />
+
+// <img className='banner' src="https://i.postimg.cc/SsZ9bNmk/aumenta-banner.webp" alt="" />
+
+// <img className='banner' src="https://i.postimg.cc/fL6dBWZL/inmuebles-banner.webp" alt="" />

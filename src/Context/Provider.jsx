@@ -27,7 +27,7 @@ export default function CartProvider({ defaultValues = [], children }) {
     if (existingProductIndex !== -1) {
       const updatedProducts = [...products];
       updatedProducts[existingProductIndex].cantidad -= quantity;
-      
+
       if (updatedProducts[existingProductIndex].cantidad <= 0) {
         updatedProducts.splice(existingProductIndex, 1);
       }
@@ -35,6 +35,29 @@ export default function CartProvider({ defaultValues = [], children }) {
       setProducts(updatedProducts);
     }
   }
+
+  const handleSubmit = (email, password) => {
+    if (isValidEmail(email) && isValidPassword(password)) {
+      window.location.href = '/';
+      
+    } else {
+      setError(true);
+    }
+  };
+
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const isValidPassword = (password) => {
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{6,}$/;
+    return passwordRegex.test(password);
+  };
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(false);
 
   return (
     <CartContext.Provider
@@ -44,6 +67,14 @@ export default function CartProvider({ defaultValues = [], children }) {
         removeFromCart,
         quantity: products.reduce((total, product) => total + product.cantidad, 0),
         products,
+        handleSubmit,
+        isValidEmail,
+        isValidPassword,
+        setEmail,
+        setPassword,
+        email,
+        password,
+        error,
       }}
     >
       {children}
@@ -62,6 +93,8 @@ export default function CartProvider({ defaultValues = [], children }) {
     </CartContext.Provider>
   );
 }
+
+
 
 
 
