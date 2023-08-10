@@ -8,11 +8,9 @@ function ItemList({ products, loading }) {
   return (
     <>
     <div>
-      {loading ? (
-        <Loading/>
-      ) : (
+      {
         products.map((product) => <Item key={product.id} product={product} />)
-      )}
+      }
     </div>
     </>
   );

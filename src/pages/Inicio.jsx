@@ -1,38 +1,61 @@
-import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import { useState, useEffect } from 'react';
-import { getProducts } from '../mock/data';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../services/firebase';
 
 function Inicio() {
   const [inicioProducts, setInicioProducts] = useState([]);
   const [ofertaProducts, setOfertaProducts] = useState([]);
+  const formaDePagoRef = useRef(null);
 
   useEffect(() => {
-    getProducts().then((res) => {
-      const filteredProductsInicio = res.filter((product) => product.section === "Inicio");
-      const filteredProductsOferta = res.filter((product) => product.section === "Oferta");
+    const fetchData = async () => {
+      const productsCollection = collection(db, 'products');
+      const productsSnapshot = await getDocs(productsCollection);
+      const productsData = productsSnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+
+      const filteredProductsInicio = productsData.filter(
+        (product) => product.section === 'Inicio'
+      );
+      const filteredProductsOferta = productsData.filter(
+        (product) => product.section === 'Oferta'
+      );
 
       setInicioProducts(filteredProductsInicio);
       setOfertaProducts(filteredProductsOferta);
-    });
+    };
+
+    fetchData();
   }, []);
+
+  const handleScroll = () => {
+    if (formaDePagoRef.current) {
+      formaDePagoRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <>
-      <Carousel>
-        <Carousel.Item interval={4000}>
-          <Link to='/category/Tecnologia'><img className='banner' src="https://i.postimg.cc/4xbgLG89/est-a-un-clic-1.png" alt="" /></Link>
-        </Carousel.Item>
-        <Carousel.Item interval={4000}>
-          <Link to='/category/Deportes y Fitness'><img className='banner' src="https://i.postimg.cc/ydmK5Sys/est-a-un-clic-3.png" alt="" /></Link>
-        </Carousel.Item>
-        <Carousel.Item interval={4000}>
-          <Link to='/category/Inmuebles'><img className='banner' src="https://i.postimg.cc/nLgQ3qSr/est-a-un-clic.png" alt="" /></Link>
-        </Carousel.Item>
-      </Carousel>
+      <div className="frontInicio">
+        <div className="h1Inicio">
+        <h1>FreeMarket</h1>
+        <img src="https://i.postimg.cc/tRkmMg84/12344375454-removebg-preview.png" alt="freemarket" />
+        </div>
 
-      <div className='formaDePago'>
+        <div className="enLinea">
+        <h4>Tu destino para encontrar las mejores ofertas en línea.</h4>
+        <h5>Explora una amplia variedad de productos, desde electrónica hasta moda y mucho más!</h5>
+        </div>
+        
+        <div className="scrollArrow" onClick={handleScroll}>
+          <span className="arrowIcon"></span>
+        </div>
+      </div>
+
+      <div className='formaDePago' ref={formaDePagoRef}>
         <div className="credito">
           <img className='tarjeta' src="https://i.postimg.cc/c4qx4gXC/tarjeta-de-credito.png" alt="" />
           <h5 className="tarjeta">Tarjeta de crédito</h5>
@@ -42,7 +65,7 @@ function Inicio() {
           <h5 className="tarjeta">Tarjeta de débito</h5>
         </div>
         <div className="cuotas">
-          <img className='tarjeta' src="./public/cuotas.svg" alt="" />
+          <img className='tarjeta' src="./src/assets/cuotas.svg" alt="" />
           <h5 className="tarjeta">Cuotas sin tarjeta</h5>
         </div>
         <div className="efectivo">
@@ -94,11 +117,3 @@ function Inicio() {
 }
 
 export default Inicio;
-
-
-
-// <img className='banner' src="https://i.postimg.cc/kM8KD9MM/samsung-banner.webp" alt="" />
-
-// <img className='banner' src="https://i.postimg.cc/SsZ9bNmk/aumenta-banner.webp" alt="" />
-
-// <img className='banner' src="https://i.postimg.cc/fL6dBWZL/inmuebles-banner.webp" alt="" />

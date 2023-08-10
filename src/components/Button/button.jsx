@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 function Button() {
   const [login, setLogin] = useState(false);
@@ -6,30 +6,28 @@ function Button() {
   useEffect(() => {
     const isUsernameStored = localStorage.getItem('username') !== null;
     setLogin(isUsernameStored);
-
   }, []);
-
 
   const handleButtonClick = () => {
     if (login) {
       localStorage.removeItem('username');
       setLogin(false);
-
-    } else {
-      return
     }
   };
 
   return (
-    <button className="inicioSesion" onClick={handleButtonClick}>
-      <span className="inicioSesion">
-        {login ? "Cerrar Sesión" : "Iniciar Sesión"}
-      </span>
-    </button>
+    <div className="button" onClick={handleButtonClick}>
+      <button>
+        <span className="button">
+          {login ? "CERRAR SESIÓN" : "INICIAR SESIÓN"}
+        </span>
+      </button>
+    </div>
   );
 }
 
 export default Button;
+
 
 
 

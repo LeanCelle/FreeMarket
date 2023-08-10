@@ -1,0 +1,100 @@
+/* Ajusta estos estilos según tu diseño */
+
+.finalizar-compra-container {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem auto;
+  padding: 4rem 0rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
+  0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
+  0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  .finalizar-compra-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .resumen-datos {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .info-dato {
+    justify-content: start;
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  div.div-datos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    .dato-label {
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .dato-valor {
+      text-align: end;
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      font-size: 1.2rem;
+    }
+  }
+  
+  .productos-en-carrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .productos-en-carrito h3 {
+    font-size: 2rem;
+  }
+  
+  .productos-en-carrito ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .productos-en-carrito li {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    padding: 0rem 5rem;
+  }
+  
+  p.pPagar {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .boton-finalizar {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .boton-finalizar:hover {
+    background-color: #0056b3;
+  }
+}

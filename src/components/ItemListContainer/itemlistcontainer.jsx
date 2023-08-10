@@ -1,4 +1,3 @@
-// ItemListContainer.js
 import React from "react";
 import ItemList from "../ItemList/itemlist";
 

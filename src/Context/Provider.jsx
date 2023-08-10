@@ -2,9 +2,12 @@ import React, { createContext, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const CartContext = createContext();
+export const GeneralContext = createContext();
 
-export default function CartProvider({ defaultValues = [], children }) {
+export default function GeneralProvider({ defaultValues = [], children }) {
+
+  // Agregar al carrito
+
   const [products, setProducts] = useState([]);
 
   function addItemToCart(item) {
@@ -36,6 +39,8 @@ export default function CartProvider({ defaultValues = [], children }) {
     }
   }
 
+  // Iniciar sesión
+
   const handleSubmit = (email, password) => {
     if (isValidEmail(email) && isValidPassword(password)) {
       window.location.href = '/';
@@ -59,10 +64,28 @@ export default function CartProvider({ defaultValues = [], children }) {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
 
+  // Datos del usuario
+
+  const [formData, setFormData] = useState({
+    nombre: '',
+    apellido: '',
+    calle: '',
+    numero: '',
+    piso: '',
+    departamento: '',
+    codigoPostal: '',
+    mail: '',
+    confirmarMail: '',
+    numeroTarjeta: '',
+    fechaVencimiento: new Date(),
+    cvv: '',
+    nombreTitular: '',
+  });
+
   return (
-    <CartContext.Provider
+    <GeneralContext.Provider
       value={{
-        name: 'CartContext',
+        name: 'GeneralContext',
         addItemToCart,
         removeFromCart,
         quantity: products.reduce((total, product) => total + product.cantidad, 0),
@@ -75,6 +98,16 @@ export default function CartProvider({ defaultValues = [], children }) {
         email,
         password,
         error,
+        formData,
+        setFormData,
+        nombre: formData.nombre,
+        apellido: formData.apellido,
+        calle: formData.calle,
+        numero: formData.numero,
+        piso: formData.piso,
+        departamento: formData.departamento,
+        codigoPostal: formData.codigoPostal,
+        mail: formData.mail,
       }}
     >
       {children}
@@ -90,7 +123,7 @@ export default function CartProvider({ defaultValues = [], children }) {
         pauseOnHover
         theme="light"
       />
-    </CartContext.Provider>
+    </GeneralContext.Provider>
   );
 }
 

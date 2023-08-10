@@ -1,0 +1,222 @@
+nav.navCarrito {
+    display: flex;
+    a.aCarrito {
+        text-decoration: none;
+    }
+    div.div-carrito {
+        display: flex;
+        justify-content: flex-end;
+        span.contadorCarrito {
+            padding: 0.2rem;
+            font-weight: bold;
+        }
+        .carrito {
+            font-size: 2rem;
+        }
+        button.button-carrito {
+            &:active {
+                box-shadow: none;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        p.empty-cart-message {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            margin-bottom: 0rem;
+            font-style: italic;
+        }
+    }
+}
+
+div.cartTotal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h4.textTotal {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    h5.total {
+        font-style: italic;
+        font-size: 1.5rem;
+    }
+}
+
+
+
+.cta {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 33px;
+    margin: 4rem auto 4rem auto;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    background: #787aff;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+    border: none;
+  }
+  
+  .cta:focus {
+    outline: none;
+  }
+  
+  .cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #52fb38;
+  }
+  
+  .cta .second {
+    transition: 0.5s;
+    margin-right: 0px;
+  }
+  
+  .cta:hover  .second {
+    transition: 0.5s;
+    margin-right: 45px;
+  }
+  
+  .span {
+    font-size: 1.2rem;
+    transform: skewX(15deg)
+  }
+  
+  .second {
+    width: 20px;
+    margin-left: 30px;
+    position: relative;
+    top: 12%;
+  }
+  
+  .one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+  }
+  
+  .two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+  }
+  
+  .cta:hover .three {
+    animation: color_anim 1s infinite 0.2s;
+  }
+  
+  .cta:hover .one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+  }
+  
+  .cta:hover .two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+  }
+  
+  @keyframes color_anim {
+    0% {
+      fill: white;
+    }
+  
+    50% {
+      fill: #48fb38;
+    }
+  
+    100% {
+      fill: white;
+    }
+  }
+
+
+.group {
+    display: flex;
+    line-height: 28px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .input {
+        width: 100%;
+        height: 40px;
+        line-height: 28px;
+        padding: 0 1rem;
+        padding-left: 2.5rem;
+        border: 2px solid transparent;
+        outline: none;
+        background-color: #f3f3f4;
+        color: #0d0c22;
+        transition: .3s ease;
+        &::placeholder {
+            font-size: 1.5rem;
+            display: flex;
+            text-align: center;
+            color: #9e9ea7;
+        }
+        &:focus, &:hover {
+            outline: none;
+            border-color: rgba(201, 201, 201, 0.4);
+            background-color: #fff;
+            box-shadow: 0 0 0 2px rgba(105, 105, 105, 0.1);
+        }
+    }
+    .icon {
+        position: absolute;
+        left: 1rem;
+        fill: #9e9ea7;
+        width: 1rem;
+        height: 1rem;
+        bottom: auto;
+    }
+}
+
+
+div.prodCarrito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0rem;
+  div.imgCarrito {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      img.imgCarrito {
+          max-width: 10rem;
+          max-height: 10rem;
+          border-radius: 1rem;
+      }
+
+  }
+  div.namePrice {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 0.5rem;
+      h3.prodCarrito {
+          font-size: 1rem;
+          font-weight: normal;
+          margin: 0;
+      }
+      p.prodCarrito {
+          font-size: 1rem;
+          margin: 0;
+      }
+  }
+  div.buttonCarrito {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+}
+  

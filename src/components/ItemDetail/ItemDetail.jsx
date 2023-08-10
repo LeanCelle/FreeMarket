@@ -1,13 +1,16 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
-import { CartContext } from '../../Context/Provider';
+import { GeneralContext } from '../../Context/Provider';
+import { collection, doc, getDoc } from 'firebase/firestore';
+import { db } from '../../services/firebase';
 
 const ItemDetail = ({ product }) => {
   const { id } = useParams();
   const [selectedProduct, setSelectedProduct] = useState();
-  const { addItemToCart } = useContext(CartContext);
+  const { addItemToCart } = useContext(GeneralContext);
 
+  
   useEffect(() => {
     // Busco el producto que coincida con el ID en product
     if (product.id === id) {
@@ -18,6 +21,7 @@ const ItemDetail = ({ product }) => {
   if (!selectedProduct) {
     return null;
   }
+
 
   const { img, name, description, price, stock } = selectedProduct;
   const lines = description.split('\n');
@@ -30,7 +34,8 @@ const ItemDetail = ({ product }) => {
 
   return (
     <>
-      <div className="detailContainer">
+    <div className="bodyDetailContainer">
+    <div className="detailContainer">
         <div className="detailContainerOne">
           <img className="detailImg" src={img} alt={name} />
         </div>
@@ -49,6 +54,7 @@ const ItemDetail = ({ product }) => {
           {line}
         </p>
       ))}
+    </div>
     </>
   );
 };
