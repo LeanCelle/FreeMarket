@@ -66,21 +66,7 @@ export default function GeneralProvider({ defaultValues = [], children }) {
 
   // Datos del usuario
 
-  const [formData, setFormData] = useState({
-    nombre: '',
-    apellido: '',
-    calle: '',
-    numero: '',
-    piso: '',
-    departamento: '',
-    codigoPostal: '',
-    mail: '',
-    confirmarMail: '',
-    numeroTarjeta: '',
-    fechaVencimiento: new Date(),
-    cvv: '',
-    nombreTitular: '',
-  });
+  const [formData, setFormData] = useState({ nombre: '', apellido: '', calle: '', numero: '', piso: '', departamento: '', codigoPostal: '', mail: '', confirmarMail: '', numeroTarjeta: '', fechaVencimiento: new Date(), cvv: '', nombreTitular: '' });
 
   return (
     <GeneralContext.Provider

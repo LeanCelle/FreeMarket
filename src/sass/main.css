@@ -319,7 +319,7 @@ div.bodyDetailContainer p.detailDescription {
 
 footer.footer {
   background-color: #f1f1f1;
-  padding: 1.6rem;
+  padding: 1rem;
   text-align: center;
 }
 footer.footer div.div-footer {
@@ -327,7 +327,10 @@ footer.footer div.div-footer {
 }
 footer.footer div.div-footer p.p-footer {
   color: rgba(0, 0, 0, 0.7529411765);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+}
+footer.footer div.div-footer p.leandroCelle {
+  color: rgba(0, 0, 0, 0.7529411765);
 }
 
 /* Estilos generales */
@@ -1019,6 +1022,122 @@ div.appWeb div.computadora img.computadora {
   margin: auto;
 }
 
+/* Estilos para el pie de página */
+hr.inicio {
+  color: rgba(0, 0, 0, 0.3254901961);
+  margin: 0rem 15rem;
+}
+
+.footer-top {
+  padding: 3rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0rem;
+}
+
+.footer-section {
+  padding: 0rem 3rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-left: solid 0.1rem rgba(0, 0, 0, 0.3254901961);
+}
+
+div.about {
+  padding-top: 2rem;
+  text-align: center;
+  border-left: none;
+}
+
+div.contact {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+div.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+}
+
+div.social {
+  border-left: none;
+}
+
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: 0.3s;
+}
+
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: 0.3s;
+}
+
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 div.inicioSesion {
   height: 95vh;
   padding-top: 10vh;

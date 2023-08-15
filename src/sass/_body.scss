@@ -149,13 +149,16 @@ div.bodyDetailContainer {
 
 footer.footer {
     background-color: #f1f1f1;
-    padding: 1.6rem;
+    padding: 1rem;
     text-align: center;
     div.div-footer {
         margin: 0 auto;
         p.p-footer {
             color: #000000c0;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
+        }
+        p.leandroCelle {
+            color: #000000c0;
         }
     }
 }

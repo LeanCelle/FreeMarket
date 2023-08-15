@@ -27,7 +27,6 @@ const Categories = () => {
                     };
                 });
 
-                // Aplicar filtro por término de búsqueda si searchTerm no está vacío
                 if (searchTerm) {
                     const filteredProducts = list.filter((product) =>
                         product.name.toLowerCase().includes(searchTerm.toLowerCase())

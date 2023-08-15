@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { ReactDOM, createRoot } from 'react';
 import './sass/main.css';
 import NavbarContainer from './components/Containers/navbarcontainer';
 import Carrito from './components/Cart/cart';
@@ -13,9 +12,6 @@ import Terms from './pages/Terms';
 import DatosUsuario from './pages/DatosUsuario';
 import FinalizarCompra from './pages/FinalizarCompra';
 import React, { useEffect } from 'react';
-import { products } from './mock/data';
-import { addDoc, collection } from 'firebase/firestore';
-import { db } from './services/firebase';
 import SignUp from './pages/SignUp';
 
 function App() {
